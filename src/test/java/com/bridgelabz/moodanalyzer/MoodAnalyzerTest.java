@@ -19,4 +19,11 @@ public class MoodAnalyzerTest {
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am in Happy Mood");
         assertEquals("HAPPY", moodAnalyzer.analyseMood());
     }
+
+    //Test for null pointer exception is thrown
+    @Test
+    void nullMood() {
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer(null);
+        assertEquals("Null value", moodAnalyzer.analyseMood());
+    }
 }
